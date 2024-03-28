@@ -1,24 +1,71 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Centering H1</title>
-        <link rel="stylesheet" href="styel.css">
-    </head>
-    <body>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+       
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+
+                <td><li><a href="#" class="active">Contact Us</a></li><td>
+                <li><a href="#" class="active">Our Package</a></li>
+                <li><a href="#" class="active">Home</a></li>
             </ul>
-        </nav>
 
-        <h2> Your Trusted Travel Agent's </h2>
+            <header>
+                <h2>Your Trusted Travel Agent's</h2>
+                <h3>Your happiness is our hapiness</h3>
+            </header>
+           
+            <div class="card-container">
+                <div class="left">
+                    <div class="left-container">
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <img src="alam.jpeg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="alam3.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="alam2.jpg" style="width:90%">
+                            </div>
+                        </div>
+                    <p>"Liburan jadi sanggat menyenangkan bersama travel semanggat abang ku"</p>
+            </div>
+            </div>
+            <div class="right">
+                <div class="right-container">
+                    <form action="">
+                        <h2 class="lg-view">Contact us</h2>
+                        <label for="username">Your Name:</label>
+                        <input type="text" placeholder="">
+                        <label for="username">Email Address</label>
+                        <input type="email" placeholder="">
+                        <select id="country" name="what are you interested in?">
+                            <option value="australia">pilih destinasi negaramu</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">Brazil</option>
+                            <option value="usa">Jepang</option>
+                          </select>
+                        <button>Kirim</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scrip.js"></script>
 
+</body>
 
-    </body>
 </html>

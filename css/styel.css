@@ -1,34 +1,217 @@
-body {
-    font-family: Arial, sans-serif;
+css
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+  
+}
+body {
+    background: #fffefe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    height: 100vh;
+    margin: 50px 0 50px;
+    padding: 10px;
 }
 
-nav {
-    background-color: #333;
-}
 
-ul {
+/* Menggaya bilah navigasi */
+nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 30px; /* Menggunakan satuan px untuk padding */
+    overflow: hidden;
+    list-style-type: none;
+    background-color: #ffffff;
 }
 
-li {
+/* Mengatur item daftar di bilah navigasi untuk mengapung ke kanan */
+nav ul li {
+    float: right;
     display: inline;
+    margin-right: 20px;
 }
 
-a {
-    display: block;
-    padding: 14px 20px;
-    color: white;
+/* Menggaya tautan di dalam item daftar bilah navigasi */
+nav ul li a {
+    font-size: 17px; /* ukuran text */
+    display: flex;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 5px 5px;
     text-decoration: none;
+    line-height: 50px;
+    display: block; /* Membuat item navigasi menempati baris terpisah */
+    margin-bottom: 10px; /* Jarak antara item navigasi */
 }
 
-a:hover {
-    background-color: #555;
+/* Menggaya tautan saat disorot di bilah navigasi */
+nav ul li a:hover {
+    background-color: #ffffff;
+}
+
+.header {
+  text-align: center; 
+  color: #000000;
+}
+
+.card-container {
+    display: flex;
+}
+
+.right {
+    display: flex;
+    flex: 1;
+    height: 420px;
+    background-color: #a59b9b;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+.left {
+    display: flex;
+    flex: 1;
+    height: 522px;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+.left-container {
+    height: 99%;
+    width: 80%;
+    text-align: left;
+    line-height: 22px;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.left-container img {
+    width: 384px; /* Lebar gambar */
+    height: 350px; /* Tinggi gambar */
+}
+
+.left p {
+    font-size: 0.9rem;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 
 h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(217, 217, 247); /* Warna teks header */
+}
+
+.right-container {
+    width: 50%;
+    height: 80%;
     text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px; /* Untuk memberikan sedikit spasi antara setiap label */
+  text-align: left;
+}
+
+
+input,
+textarea {
+    background-color: #ffffff;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid #00b4cf;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #00b4cf;
+    background-color: #00b4cf;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-out;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+textarea {
+    height: 90px;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 600px){
+    .left {
+        display: none;
+    }
+
+    .lg-view {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .sm-view {
+        display: none;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 15px; /* Mengurangi padding header */
+    margin: 0; /* Menghapus margin */
+}
+
+/* Menggaya gambar lingkaran */
+.circle-img {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 40%;
+    margin-bottom: 0px;
+}
+
+/* Menggaya gambar di dalam lingkaran */
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
